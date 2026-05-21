@@ -47,7 +47,7 @@ const services = [
 const plans = [
   {
     name: 'Starter',
-    price: 'Free',
+    price: '$499',
     period: '',
     desc: 'Perfect for absolute beginners exploring the world of trading.',
     features: ['Introduction to Forex & Stocks', '5 free video lessons', 'Community forum access', 'Weekly market newsletter'],
@@ -56,7 +56,7 @@ const plans = [
   },
   {
     name: 'Professional',
-    price: '$97',
+    price: '$999',
     period: '/month',
     desc: 'Full curriculum access for serious traders ready to level up.',
     features: ['All 5 market courses', 'Live trading sessions (3x/week)', 'Real-time signal alerts', 'Private Discord community', 'Monthly 1-on-1 mentor call', 'All research reports'],
@@ -65,12 +65,32 @@ const plans = [
   },
   {
     name: 'Elite',
-    price: '$247',
+    price: '$1499',
     period: '/month',
     desc: 'Institutional-grade intelligence for professional traders.',
     features: ['Everything in Professional', 'Daily market briefings', 'Priority signal alerts', 'Unlimited mentor access', 'Portfolio review sessions', 'Exclusive webinars', 'Custom research requests'],
     cta: 'Join Elite',
     highlight: false,
+  },
+  
+  {
+    name: 'Legend',
+    price: '$4999',
+    period: '/month',
+    desc: 'The ultimate trading powerhouse for elite investors and hedge-level execution.',
+    features: [
+      'Everything in Elite',
+      '24/7 VIP mentor support',
+      'AI-powered trading strategies',
+      'Private mastermind group',
+      'Institutional market insights',
+      'Exclusive hedge fund strategies',
+      'Direct portfolio management guidance',
+      'Early access to new trading tools',
+      'Personal risk-management coaching',
+    ],
+    cta: 'Become a Legend',
+    highlight: true,
   },
 ];
 

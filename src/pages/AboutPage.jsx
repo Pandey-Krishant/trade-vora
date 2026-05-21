@@ -30,7 +30,7 @@ const timeline = [
   { year: '2023', title: '50,000 Milestone', desc: 'Celebrated our 50,000th student milestone, cementing our position as one of the world\'s leading trading education platforms.' },
 ];
 
-export default function AboutPage() {
+const AboutPage = () => {
   const heroRef = useRef(null);
   const storyRef = useRef(null);
   const statsRef = useRef([]);
@@ -100,7 +100,7 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <div>
+    <div className="about-page">
       {/* ─── HERO ─── */}
       <div className="page-hero" ref={heroRef}>
         <div className="page-hero-inner">
@@ -255,4 +255,6 @@ export default function AboutPage() {
       </div>
     </div>
   );
-}
+};
+
+export default AboutPage;
