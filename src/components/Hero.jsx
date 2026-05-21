@@ -52,22 +52,6 @@ export default function Hero() {
           <button className="btn btn-primary resource-btn">RESOURCE HUB</button>
         </div>
       </div>
-      
-      {/* Stats bar floating at the bottom of hero */}
-      <div className="stats-bar">
-        <div className="stat-item">
-          <h4>17+</h4>
-          <p>Years of Experience</p>
-        </div>
-        <div className="stat-item">
-          <h4>10000+</h4>
-          <p>Successful Trades</p>
-        </div>
-        <div className="stat-item">
-          <h4>2300+</h4>
-          <p>Active Clients</p>
-        </div>
-      </div>
     </div>
   );
 }
