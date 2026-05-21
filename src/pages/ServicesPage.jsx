@@ -238,6 +238,7 @@ export default function ServicesPage() {
               <div
                 key={i}
                 ref={el => planRefs.current[i] = el}
+                className="pricing-card"
                 style={{
                   background: plan.highlight ? 'var(--primary-blue)' : '#fff',
                   borderRadius: 24,

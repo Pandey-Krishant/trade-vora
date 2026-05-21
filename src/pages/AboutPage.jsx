@@ -165,7 +165,7 @@ const AboutPage = () => {
               <h2>Empowering Traders with Institutional-Grade Intelligence</h2>
               <p>Our mission is straightforward: to equip every trader—regardless of background or capital size—with the analytical tools, market knowledge, and strategic frameworks used by the world's best professional traders.</p>
               <p>We believe financial markets should not be the exclusive playground of the ultra-wealthy. Through disciplined education, transparent research, and a supportive global community, we are leveling the playing field.</p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginTop: 30 }}>
+              <div className="mission-mini-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginTop: 30 }}>
                 {[
                   { icon: '🎯', label: 'Our Mission', desc: 'Democratize elite trading education for everyone globally.' },
                   { icon: '🌟', label: 'Our Vision', desc: 'A world where every trader trades with confidence and clarity.' },

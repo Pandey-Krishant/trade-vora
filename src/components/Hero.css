@@ -1,6 +1,6 @@
 .hero-container {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   background: linear-gradient(135deg, #ffffff 40%, #f6ecd8 100%);
   position: relative;
   display: flex;
@@ -86,6 +86,144 @@
   flex: 1;
 }
 
+.video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  background: #07162b;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.hero-video.is-ready {
+  opacity: 1;
+}
+
+.video-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 28px;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(204, 164, 80, 0.22), transparent 30%),
+    linear-gradient(135deg, #07162b 0%, #0d1f3c 48%, #132f58 100%);
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.video-fallback.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.market-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+  opacity: 0.7;
+}
+
+.market-line {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #cca450, transparent);
+  transform-origin: left center;
+  animation: marketSweep 4s linear infinite;
+}
+
+.line-one {
+  top: 38%;
+  transform: rotate(-8deg);
+}
+
+.line-two {
+  top: 57%;
+  animation-delay: 1.4s;
+  transform: rotate(7deg);
+}
+
+.market-candles {
+  position: relative;
+  z-index: 1;
+  width: 86%;
+  height: 70%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.market-candles span {
+  width: 9%;
+  height: var(--h);
+  border-radius: 4px 4px 2px 2px;
+  background: linear-gradient(180deg, #f5c65b, #b78124);
+  box-shadow: 0 12px 26px rgba(204, 164, 80, 0.22);
+  position: relative;
+  animation: candlePulse 1.8s ease-in-out infinite alternate;
+  animation-delay: var(--d);
+}
+
+.market-candles span:nth-child(odd) {
+  background: linear-gradient(180deg, #4f8df7, #1e3a8a);
+}
+
+.market-candles span::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -22%;
+  width: 3px;
+  height: 144%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.72);
+  z-index: -1;
+}
+
+.video-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 2;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+}
+
+@keyframes candlePulse {
+  from { transform: scaleY(0.86); opacity: 0.75; }
+  to { transform: scaleY(1); opacity: 1; }
+}
+
+@keyframes marketSweep {
+  from { opacity: 0; translate: -12% 0; }
+  30% { opacity: 1; }
+  to { opacity: 0; translate: 12% 0; }
+}
+
 .hero-right h2 {
   font-size: 2.5rem;
   margin-bottom: 15px;
@@ -137,19 +275,20 @@
 
 @media (max-width: 768px) {
   .hero-container {
-    flex-direction: column; /* Ensure content is above image */
-    padding-top: 60px; /* Adjusted for navbar */
+    min-height: auto;
+    padding: 150px 16px 48px;
   }
 
   .hero-content {
-    order: 1; /* Content above image */
     flex-direction: column;
     text-align: center;
+    gap: 26px;
     padding: 0;
   }
 
   .hero-left, .hero-right {
-    padding: 10px 0;
+    width: 100%;
+    padding: 0;
   }
 
   .hero-left h1 {
@@ -160,8 +299,13 @@
     font-size: 1.5rem;
   }
 
+  .video-container {
+    margin-bottom: 22px;
+  }
+
   .desc-text {
     max-width: 100%;
+    margin-bottom: 26px;
   }
 
   .stats-bar {
@@ -171,9 +315,8 @@
   }
 
   .candlestick-group {
-    order: 2; /* Image below content */
-    margin-top: 20px; /* Add spacing above candlestick image */
-    margin-bottom: 20px; /* Reduced spacing */
+    height: 130px;
+    margin: 14px 0 18px;
   }
 
   .candlestick-group .candle {
@@ -183,5 +326,29 @@
 
   .candlestick-group .candle::before {
     height: 120%; /* Adjusted wick height */
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-container {
+    padding-top: 170px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.72rem;
+  }
+
+  .hero-right h2 {
+    font-size: 1.35rem;
+  }
+
+  .elite-text {
+    font-size: 1rem;
+  }
+
+  .resource-btn {
+    width: 100%;
+    padding: 13px 18px;
+    font-size: 0.95rem;
   }
 }
