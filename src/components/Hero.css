@@ -137,12 +137,12 @@
 
 @media (max-width: 768px) {
   .hero-container {
-    flex-direction: column-reverse; /* Move image below content */
-    padding: 20px;
+    flex-direction: column; /* Ensure content is above image */
     padding-top: 60px; /* Adjusted for navbar */
   }
 
   .hero-content {
+    order: 1; /* Content above image */
     flex-direction: column;
     text-align: center;
     padding: 0;
@@ -171,6 +171,7 @@
   }
 
   .candlestick-group {
+    order: 2; /* Image below content */
     margin-top: 20px; /* Add spacing above candlestick image */
     margin-bottom: 20px; /* Reduced spacing */
   }
