@@ -1,0 +1,142 @@
+.hero-container {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #ffffff 40%, #f6ecd8 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  will-change: transform, opacity;
+  padding-top: 80px; /* Offset for navbar */
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.hero-left {
+  flex: 1;
+  text-align: center;
+  padding-right: 50px;
+}
+
+.candlestick-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  height: 200px;
+}
+
+.candle {
+  width: 40px;
+  position: relative;
+  border-radius: 4px;
+}
+
+.candle::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 150%;
+  left: 50%;
+  top: -25%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.blue-candle {
+  height: 100px;
+  background: linear-gradient(180deg, #3b82f6, #1e3a8a);
+  box-shadow: 0 10px 20px rgba(30, 58, 138, 0.3);
+}
+
+.blue-candle::before { background: #1e3a8a; }
+
+.gold-candle {
+  height: 160px;
+  background: linear-gradient(180deg, #fcd34d, #b45309);
+  box-shadow: 0 10px 20px rgba(180, 83, 9, 0.3);
+  transform: translateY(-20px);
+}
+
+.gold-candle::before { background: #b45309; }
+
+.hero-left h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+
+.hero-right {
+  flex: 1;
+}
+
+.hero-right h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: var(--primary-blue);
+  line-height: 1.2;
+}
+
+.elite-text {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.desc-text {
+  color: var(--text-light);
+  margin-bottom: 40px;
+  max-width: 90%;
+}
+
+.resource-btn {
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  box-shadow: 0 10px 20px rgba(204, 164, 80, 0.3);
+}
+
+.stats-bar {
+  position: absolute;
+  bottom: 40px;
+  right: 10%;
+  background: transparent;
+  border: 2px solid var(--accent-gold);
+  border-radius: 40px;
+  display: flex;
+  padding: 20px 40px;
+  gap: 50px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h4 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+}
+
+.stat-item p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 0;
+}

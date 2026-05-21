@@ -1,0 +1,138 @@
+.section {
+  padding: 120px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bg-white { background-color: var(--bg-white); }
+.bg-cream { background-color: var(--bg-cream); }
+
+.section-content {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 80px;
+  align-items: center;
+}
+
+.section-header {
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.text-center { text-align: center; }
+
+.section-subtitle {
+  color: var(--accent-gold);
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  line-height: 1.2;
+  color: var(--primary-blue);
+}
+
+.text-content { flex: 1; }
+.image-wrapper { flex: 1; perspective: 1000px; }
+
+.image-content {
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(28, 61, 122, 0.15);
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.bg-placeholder-1 {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #11254a 100%);
+}
+
+.overlay-graphic {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px; height: 200px;
+  border: 4px solid rgba(204, 164, 80, 0.2);
+  border-radius: 50%;
+}
+
+.feature-list {
+  list-style: none;
+  margin: 30px 0;
+}
+
+.feature-list li {
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+}
+
+.check-icon {
+  color: var(--accent-gold);
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+/* Services Grid */
+.services-grid-large {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.service-card-large {
+  background: var(--bg-white);
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-bottom: 4px solid transparent;
+}
+
+.service-card-large:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border-bottom-color: var(--accent-gold);
+}
+
+.icon-wrapper {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding: 15px;
+  background: var(--bg-cream);
+  border-radius: 12px;
+}
+
+.service-card-large h4 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.service-card-large p {
+  color: var(--text-light);
+  margin-bottom: 25px;
+}
+
+.read-more {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
