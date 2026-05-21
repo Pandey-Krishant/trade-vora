@@ -24,9 +24,12 @@ const services = [
 ];
 
 const testimonials = [
-  { name: 'Arjun Sharma', role: 'Full-Time Trader', stars: 5, text: 'Trade Viora transformed my approach to the markets completely. The education here is unparalleled. Within 6 months I was consistently profitable.', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face' },
-  { name: 'Priya Menon', role: 'Forex Analyst', stars: 5, text: 'The in-depth research reports and live market sessions gave me real-world skills that no textbook can teach. Absolutely recommend!', avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b37f?w=60&h=60&fit=crop&crop=face' },
-  { name: 'Rahul Verma', role: 'Crypto Investor', stars: 5, text: 'I had zero knowledge about crypto markets. After completing the course, I confidently manage my portfolio with consistent returns.', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face' },
+  { name: 'Michael Anderson', role: 'Full-Time Trader', stars: 5, text: 'Trade Viora transformed my approach to the markets completely. The education here is unparalleled. Within 6 months I was consistently profitable.', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face' },
+  { name: 'Emily Carter', role: 'Forex Analyst', stars: 5, text: 'The in-depth research reports and live market sessions gave me real-world skills that no textbook can teach. Absolutely recommend!', avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b37f?w=60&h=60&fit=crop&crop=face' },
+  { name: 'Daniel Brooks', role: 'Crypto Investor', stars: 5, text: 'I had zero knowledge about crypto markets. After completing the course, I confidently manage my portfolio with consistent returns.', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face' },
+  { name: 'Sophia Bennett', role: 'Swing Trader', stars: 5, text: 'The mentorship sessions helped me stop guessing and start following a real trading process. The clarity is exactly what I needed.', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face' },
+  { name: 'James Wilson', role: 'Portfolio Manager', stars: 5, text: 'Their market breakdowns are sharp, practical, and easy to act on. I use the weekly research notes before planning every trading week.', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&crop=face' },
+  { name: 'Olivia Harris', role: 'Commodities Trader', stars: 5, text: 'The gold and oil modules were excellent. Trade Viora gave me a structured way to understand risk, entries, and market context.', avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&h=60&fit=crop&crop=face' },
 ];
 
 const articles = [
