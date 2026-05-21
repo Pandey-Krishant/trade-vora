@@ -52,3 +52,19 @@
   display: flex;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 8px 10px; /* Compact padding for smaller screens */
+    background-color: #fff; /* Ensure visibility */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  }
+
+  .navbar-brand {
+    font-size: 1rem; /* Compact font size */
+  }
+
+  .navbar-menu {
+    gap: 5px; /* Reduce spacing between menu items */
+  }
+}

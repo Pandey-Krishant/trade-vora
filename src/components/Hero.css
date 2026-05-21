@@ -137,8 +137,9 @@
 
 @media (max-width: 768px) {
   .hero-container {
-    flex-direction: column;
+    flex-direction: column-reverse; /* Move image below content */
     padding: 20px;
+    padding-top: 60px; /* Adjusted for navbar */
   }
 
   .hero-content {
@@ -167,5 +168,19 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+  }
+
+  .candlestick-group {
+    margin-top: 20px; /* Add spacing above candlestick image */
+    margin-bottom: 20px; /* Reduced spacing */
+  }
+
+  .candlestick-group .candle {
+    width: 30px; /* Adjusted size for smaller screens */
+    height: 80px;
+  }
+
+  .candlestick-group .candle::before {
+    height: 120%; /* Adjusted wick height */
   }
 }
